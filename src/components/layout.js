@@ -43,9 +43,8 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 `
-const Main = styled.div`
-  border: solid 2px red;
-`
+const Main = styled.div``
+
 const Page = styled.div`
   min-height: 100vh;
   border: 20px solid ${props => props.theme.colorWhite};
