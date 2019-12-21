@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import profileImgJay from "../images/profile-jay-grey.svg"
+import profileImageJames from "../images/James-profile.svg"
 
 const CardProfileImageStyled = styled.img`
   width: 159px;
@@ -9,7 +9,7 @@ const CardProfileImageStyled = styled.img`
 `
 const ProfileImage = () => (
   <CardProfileImageStyled
-    src={profileImgJay}
+    src={profileImageJames}
     alt="profile image of James Vickers, Developer"
     aria-hidden="true"
   />

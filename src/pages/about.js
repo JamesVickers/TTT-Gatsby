@@ -1,8 +1,6 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ScrollImage from "../components/scrollImage"
 import Card from "../components/card"
 import Footer from "../components/footer"
 
@@ -19,8 +17,12 @@ const About = props => (
     <p>We build and host Websites.</p>
     <p>We build Applications.</p>
     <p>We offer Freelance Development work.</p>
-    <ScrollImage />
-    <Card />
+    <Card name="James">I am James</Card>
+
+    <Card name="Hannah" />
+
+    <Card name="The Design team" />
+
     <Footer />
   </Layout>
 )

@@ -35,19 +35,10 @@ const StyledCardHexagonalImage = styled.image`
   margin-bottom: 30px;
 `
 
-const Card = () => (
+const Card = ({ name }) => (
   <StyledCardDiv>
-    <h3>James, Developer</h3>
+    <h3>{name}, Developer</h3>
     <ProfileImg />
-    <p>Full-stack developer with server management skills.</p>
-    <p>
-      Holistic approach, incorporating his knowledge of User Experience and
-      Accessibility.
-    </p>
-    <p>
-      James has a passion for new technologies and creating innovative
-      solutions.
-    </p>
   </StyledCardDiv>
 )
 
