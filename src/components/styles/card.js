@@ -1,8 +1,6 @@
-import React, { Component } from "react"
 import styled from "styled-components"
-import ProfileImg from "./profile-img"
 
-const StyledCardDiv = styled.div`
+const CardStyles = styled.div`
   max-width: 200px;
   align-items: center;
   width: 95%;
@@ -30,16 +28,4 @@ const StyledCardDiv = styled.div`
     }
   }
 `
-
-const StyledCardHexagonalImage = styled.image`
-  margin-bottom: 30px;
-`
-
-const Card = ({ name }) => (
-  <StyledCardDiv>
-    <h3>{name}, Developer</h3>
-    <ProfileImg />
-  </StyledCardDiv>
-)
-
-export default Card
+export default CardStyles
