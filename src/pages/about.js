@@ -5,7 +5,9 @@ import SEO from "../components/seo"
 import Footer from "../components/footer"
 import HexFallingLeft from "../components/hexFallingLeft"
 import HexFallingRight from "../components/hexFallingRight"
+import BannerStyles from "../components/styles/banner"
 import CardStyles from "../components/styles/card"
+import BannerImageFern from "../images/banner-img-fern.png"
 import JamesProfileImage from "../images/James-profile.svg"
 import HannahProfileImage from "../images/Hannah-profile.svg"
 import DesignerProfileImage from "../images/Designer-profile.svg"
@@ -19,7 +21,14 @@ const ProfileImage = styled.img`
 const About = props => (
   <Layout>
     <SEO title="about" />
-    <h1>About</h1>
+    <BannerStyles>
+      <img
+        src={BannerImageFern}
+        alt="close up of fern leaves"
+        aria-hidden="true"
+      />
+      <h2 tabindex="0">About</h2>
+    </BannerStyles>
     <p>We build and host Websites.</p>
     <p>We build Applications.</p>
     <p>We offer Freelance Development work.</p>

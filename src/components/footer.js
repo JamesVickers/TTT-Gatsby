@@ -1,23 +1,29 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHorse } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 
 const FooterDiv = styled.div`
   flex-shrink: 0;
   margin-top: 0px;
-  footer ul {
+  ul {
     width: 90%;
     margin: 50px auto 0 auto;
     padding: 40px 0;
     border-top: solid 1.5px ${props => props.theme.colorMedium};
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  footer a {
-    color: $color-dark;
+  a {
+    color: ${props => props.theme.colorDark};
     text-decoration: none;
     width: 550px;
     max-width: 550px;
   }
-  footer a:hover {
+  a:hover {
     color: ${props => props.theme.colorSecondary};
   }
 `
@@ -25,33 +31,44 @@ const FooterDiv = styled.div`
 const Footer = () => (
   <FooterDiv>
     <ul className="footer-ul">
-      <Link to="/contact" aria-label="Clickable link to the Contact us page">
-        Contact us
-      </Link>
-      <Link
-        to="mailto:support@treetops.tech"
-        aria-label="Clickable link to email Treetops Tech"
-      >
-        support@treetops.tech
-      </Link>
-      <Link
-        to="/contact"
-        aria-label="Treetops Tech telephone number 01538 266395"
-      >
-        01538 266395
-      </Link>
-      <Link
-        to="https://www.facebook.com/treetopstech"
-        aria-label="Clickable link to the Contact us page"
-      >
-        FACEBOOK LINK HERE!!!!!!!!!!!!
-      </Link>
-      <Link
-        to="/privacy"
-        aria-label="Clickable link to the Privacy policy page"
-      >
-        Privacy Policy
-      </Link>
+      <li>
+        <Link to="/contact" aria-label="Clickable link to the Contact us page">
+          Contact us
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="mailto:support@treetops.tech"
+          aria-label="Clickable link to email Treetops Tech"
+        >
+          support@treetops.tech
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/contact"
+          aria-label="Treetops Tech telephone number 01538 266395"
+        >
+          01538 266395
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="https://www.facebook.com/treetopstech"
+          aria-label="Clickable link to the Contact us page"
+        >
+          FACEBOOK LINK HERE!!!!!!!!!!!!
+        </Link>
+        <FontAwesomeIcon icon={faHorse} />
+      </li>
+      <li>
+        <Link
+          to="/privacy"
+          aria-label="Clickable link to the Privacy policy page"
+        >
+          Privacy Policy
+        </Link>
+      </li>
       <li>Treetops Tech Ltd. 2019</li>
       <li>All rights reserved</li>
     </ul>
