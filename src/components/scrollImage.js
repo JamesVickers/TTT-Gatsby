@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import scrollImage from "../images/scroll-icon-opacity40.png"
+import { faAngleDoubleDown } from "@fortawesome/free-brands-svg-icons"
 
+/*
 const ScrollImageStyles = styled.img`
   width: 32px;
   height: 35px;
@@ -19,3 +21,4 @@ const ScrollImage = () => (
 )
 
 export default ScrollImage
+*/

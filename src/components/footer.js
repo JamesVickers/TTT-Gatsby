@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHorse } from "@fortawesome/free-solid-svg-icons"
+import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 
 const FooterDiv = styled.div`
@@ -57,9 +57,11 @@ const Footer = () => (
           to="https://www.facebook.com/treetopstech"
           aria-label="Clickable link to the Contact us page"
         >
-          FACEBOOK LINK HERE!!!!!!!!!!!!
+          <FontAwesomeIcon
+            icon={faFacebookSquare}
+            style={{ height: "30px", width: "30px" }}
+          />
         </Link>
-        <FontAwesomeIcon icon={faHorse} />
       </li>
       <li>
         <Link

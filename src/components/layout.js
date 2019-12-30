@@ -43,7 +43,9 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 `
-const Main = styled.div``
+const Main = styled.div`
+  text-align: center;
+`
 
 const Page = styled.div`
   min-height: 100vh;

@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer"
@@ -29,12 +31,18 @@ const About = props => (
       />
       <h2 tabindex="0">About</h2>
     </BannerStyles>
+
+    <FontAwesomeIcon
+      icon={faAngleDoubleDown}
+      style={{ height: "30px", width: "30px", color: "#FFE000" }}
+    />
+
     <p>We build and host Websites.</p>
     <p>We build Applications.</p>
     <p>We offer Freelance Development work.</p>
 
     <HexFallingLeft />
-    <HexFallingRight />
+
     <h2>The Team</h2>
     <CardStyles>
       <h3>James, developer</h3>
@@ -79,6 +87,8 @@ const About = props => (
         experience and achieve your goals.
       </p>
     </CardStyles>
+
+    <HexFallingRight />
 
     <Footer />
   </Layout>
