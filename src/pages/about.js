@@ -34,7 +34,7 @@ const About = props => (
 
     <FontAwesomeIcon
       icon={faAngleDoubleDown}
-      style={{ height: "30px", width: "30px", color: "#FFE000" }}
+      style={{ height: "50px", width: "50px", color: "#FFE000" }}
     />
 
     <p>We build and host Websites.</p>
