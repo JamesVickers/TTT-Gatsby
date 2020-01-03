@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import WorkExampleBrewces from "../components/workExampleBrewces"
 import WorkExampleBochiBochi from "../components/workExampleBochiBochi"
-
+import WorkExampleApp from "../components/workExampleApp"
+import WorkExampleFreelance from "../components/workExampleFreelance"
 import Footer from "../components/footer"
 import HexButtonLeft from "../images/hex-button-left.png"
 import HexButtonRight from "../images/hex-button-right.png"
@@ -43,6 +44,8 @@ const Work = props => (
 
     <WorkExampleBrewces />
     <WorkExampleBochiBochi />
+    <WorkExampleApp />
+    <WorkExampleFreelance />
 
     <Footer />
   </Layout>
