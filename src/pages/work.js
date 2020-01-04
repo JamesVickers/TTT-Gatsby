@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,28 +28,55 @@ const HexButtonDiv = styled.div`
   }
 `
 
-const Work = props => (
-  <Layout>
-    <SEO title="work" />
-    <HexButtonDiv>
-      <img
-        src={HexButtonLeft}
-        alt="hexagonal button linking to the previous work example page"
-      />
-      <h2>Business websites</h2>
-      <img
-        src={HexButtonRight}
-        alt="hexagonal button linking to the next work example page"
-      />
-    </HexButtonDiv>
+const examplesArray = [
+  <WorkExampleBrewces />,
+  <WorkExampleBochiBochi />,
+  <WorkExampleApp />,
+  <WorkExampleFreelance />,
+]
 
-    <WorkExampleBrewces />
-    <WorkExampleBochiBochi />
-    <WorkExampleApp />
-    <WorkExampleFreelance />
+function talk() {
+  console.log("speaking")
+}
 
-    <Footer />
-  </Layout>
-)
+class Work extends Layout {
+  constructor(props) {
+    super(props)
+    this.state = {
+      examplesArrayIndex: 0,
+    }
+  }
 
+  incrementExamplesIndex = () => {
+    //this.setState doesnt increment, only goes up to 1
+    //this.state.examplesArrayIndex++ increments but not shown on page because no re-render of Work component
+    this.state.examplesArrayIndex++
+    console.log(this.state.examplesArrayIndex)
+  }
+
+  render() {
+    return (
+      <Layout>
+        <SEO title="work" />
+        <HexButtonDiv>
+          <button onClick={() => this.incrementExamplesIndex()}>
+            <img
+              src={HexButtonLeft}
+              alt="hexagonal button linking to the previous work example page"
+            />
+          </button>
+          <h2>Business websites</h2>
+          <img
+            src={HexButtonRight}
+            alt="hexagonal button linking to the next work example page"
+          />
+        </HexButtonDiv>
+
+        {examplesArray[this.state.examplesArrayIndex]}
+
+        <Footer />
+      </Layout>
+    )
+  }
+}
 export default Work
