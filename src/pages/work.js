@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,28 +27,54 @@ const HexButtonDiv = styled.div`
   }
 `
 
-const Work = props => (
-  <Layout>
-    <SEO title="work" />
-    <HexButtonDiv>
-      <img
-        src={HexButtonLeft}
-        alt="hexagonal button linking to the previous work example page"
-      />
-      <h2>Business websites</h2>
-      <img
-        src={HexButtonRight}
-        alt="hexagonal button linking to the next work example page"
-      />
-    </HexButtonDiv>
+const examplesArray = [
+  <WorkExampleBrewces />,
+  <WorkExampleBochiBochi />,
+  <WorkExampleApp />,
+  <WorkExampleFreelance />,
+]
 
-    <WorkExampleBrewces />
-    <WorkExampleBochiBochi />
-    <WorkExampleApp />
-    <WorkExampleFreelance />
+function Work() {
+  const [workImgNumber, setWork] = useState(0)
 
-    <Footer />
-  </Layout>
-)
+  //loop through index 0-3 - don't allow anything outside this index range
+  function decrementIndex() {
+    if (workImgNumber > 0) {
+      setWork(workImgNumber - 1)
+    } else {
+      setWork(3)
+    }
+  }
+  function incrementIndex() {
+    if (workImgNumber == 3) {
+      setWork(0)
+    } else {
+      setWork(workImgNumber + 1)
+    }
+  }
+
+  return (
+    <Layout>
+      <SEO title="work" />
+      <HexButtonDiv>
+        <button onClick={() => decrementIndex()}>
+          <img
+            src={HexButtonLeft}
+            alt="hexagonal button linking to the previous work example page"
+          />
+        </button>
+        <h2>Business websites</h2>
+        <button onClick={() => incrementIndex()}>
+          <img
+            src={HexButtonRight}
+            alt="hexagonal button linking to the next work example page"
+          />
+        </button>
+      </HexButtonDiv>
+      {examplesArray[workImgNumber]}
+      <Footer />
+    </Layout>
+  )
+}
 
 export default Work
