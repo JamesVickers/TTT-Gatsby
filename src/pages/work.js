@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
@@ -27,56 +27,50 @@ const HexButtonDiv = styled.div`
     padding: 4px;
   }
 `
-
+/*
 const examplesArray = [
   <WorkExampleBrewces />,
   <WorkExampleBochiBochi />,
   <WorkExampleApp />,
   <WorkExampleFreelance />,
 ]
+*/
 
 function talk() {
   console.log("speaking")
 }
 
-class Work extends Layout {
-  constructor(props) {
-    super(props)
-    this.state = {
-      examplesArrayIndex: 0,
-    }
-  }
+function Work() {
+  const [age, setAge] = useState(30)
 
-  incrementExamplesIndex = () => {
-    //this.setState doesnt increment, only goes up to 1
-    //this.state.examplesArrayIndex++ increments but not shown on page because no re-render of Work component
-    this.state.examplesArrayIndex++
-    console.log(this.state.examplesArrayIndex)
-  }
-
-  render() {
-    return (
-      <Layout>
-        <SEO title="work" />
-        <HexButtonDiv>
-          <button onClick={() => this.incrementExamplesIndex()}>
-            <img
-              src={HexButtonLeft}
-              alt="hexagonal button linking to the previous work example page"
-            />
-          </button>
-          <h2>Business websites</h2>
+  return (
+    <Layout>
+      <SEO title="work" />
+      <p>{age}</p>
+      <HexButtonDiv>
+        <button onClick={() => setAge(age - 1)}>
+          <img
+            src={HexButtonLeft}
+            alt="hexagonal button linking to the previous work example page"
+          />
+        </button>
+        <h2>Business websites</h2>
+        <button onClick={() => setAge(age + 1)}>
           <img
             src={HexButtonRight}
             alt="hexagonal button linking to the next work example page"
           />
-        </HexButtonDiv>
+        </button>
+      </HexButtonDiv>
 
-        {examplesArray[this.state.examplesArrayIndex]}
+      <WorkExampleBrewces />
+      <WorkExampleBochiBochi />
+      <WorkExampleApp />
+      <WorkExampleFreelance />
 
-        <Footer />
-      </Layout>
-    )
-  }
+      <Footer />
+    </Layout>
+  )
 }
+
 export default Work
