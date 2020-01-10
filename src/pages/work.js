@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,47 +26,52 @@ const HexButtonDiv = styled.div`
     padding: 4px;
   }
 `
-/*
+
 const examplesArray = [
   <WorkExampleBrewces />,
   <WorkExampleBochiBochi />,
   <WorkExampleApp />,
   <WorkExampleFreelance />,
 ]
-*/
-
-function talk() {
-  console.log("speaking")
-}
 
 function Work() {
-  const [age, setAge] = useState(30)
+  const [workImgNumber, setWork] = useState(0)
+
+  //loop through index 0-3 - don't allow anything outside this index range
+  function decrementIndex() {
+    if (workImgNumber > 0) {
+      setWork(workImgNumber - 1)
+    } else {
+      setWork(3)
+    }
+  }
+  function incrementIndex() {
+    if (workImgNumber == 3) {
+      setWork(0)
+    } else {
+      setWork(workImgNumber + 1)
+    }
+  }
 
   return (
     <Layout>
       <SEO title="work" />
-      <p>{age}</p>
       <HexButtonDiv>
-        <button onClick={() => setAge(age - 1)}>
+        <button onClick={() => decrementIndex()}>
           <img
             src={HexButtonLeft}
             alt="hexagonal button linking to the previous work example page"
           />
         </button>
         <h2>Business websites</h2>
-        <button onClick={() => setAge(age + 1)}>
+        <button onClick={() => incrementIndex()}>
           <img
             src={HexButtonRight}
             alt="hexagonal button linking to the next work example page"
           />
         </button>
       </HexButtonDiv>
-
-      <WorkExampleBrewces />
-      <WorkExampleBochiBochi />
-      <WorkExampleApp />
-      <WorkExampleFreelance />
-
+      {examplesArray[workImgNumber]}
       <Footer />
     </Layout>
   )
