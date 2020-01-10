@@ -29,7 +29,7 @@ const FooterDiv = styled.div`
 `
 
 const Footer = () => (
-  <FooterDiv>
+  <FooterDiv id="footer">
     <ul className="footer-ul">
       <li>
         <Link to="/contact" aria-label="Clickable link to the Contact us page">
@@ -53,15 +53,16 @@ const Footer = () => (
         </Link>
       </li>
       <li>
-        <Link
+        <a
           to="https://www.facebook.com/treetopstech"
           aria-label="Clickable link to the Contact us page"
+          target="_blank"
         >
           <FontAwesomeIcon
             icon={faFacebookSquare}
             style={{ height: "30px", width: "30px" }}
           />
-        </Link>
+        </a>
       </li>
       <li>
         <Link

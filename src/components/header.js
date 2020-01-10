@@ -72,7 +72,9 @@ const Header = () => (
       <Link to="/work" aria-label="Clickable link to the Work page">
         Work
       </Link>
-      <li aria-label="Clickable link to the Pricing page">Pricing</li>
+      <Link to="/pricing" aria-label="Clickable link to the Pricing page">
+        Pricing
+      </Link>
     </DesktopNav>
     <Link to="/" aria-label="Clickable link to the Home page">
       <HeaderLogo
@@ -82,7 +84,9 @@ const Header = () => (
       />
     </Link>
     <DesktopNav>
-      <li aria-label="Clickable link to the News page">News</li>
+      <Link to="/news" aria-label="Clickable link to the News page">
+        News
+      </Link>
       <li aria-label="Clickable link to the Blog page">Articles</li>
       <li aria-label="Clickable link to the Contact page">Contact</li>
     </DesktopNav>

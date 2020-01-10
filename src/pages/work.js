@@ -37,7 +37,7 @@ const examplesArray = [
 function Work() {
   const [workImgNumber, setWork] = useState(0)
 
-  //loop through index 0-3 - don't allow anything outside this index range
+  //loop through index 0-3 of examplesArray- don't allow anything outside this index range
   function decrementIndex() {
     if (workImgNumber > 0) {
       setWork(workImgNumber - 1)
