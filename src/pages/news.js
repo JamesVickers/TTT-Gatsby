@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
