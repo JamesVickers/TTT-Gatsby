@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
+import BackToTopButton from "../components/backToTopButton"
 
 const FooterDiv = styled.div`
   flex-shrink: 0;
-  margin-top: 0px;
+  margin-top: 40px;
   ul {
     width: 90%;
     margin: 50px auto 0 auto;
@@ -30,6 +31,7 @@ const FooterDiv = styled.div`
 
 const Footer = () => (
   <FooterDiv id="footer">
+    <BackToTopButton />
     <ul className="footer-ul">
       <li>
         <Link to="/contact" aria-label="Clickable link to the Contact us page">

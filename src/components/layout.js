@@ -6,6 +6,7 @@ import Header from "./header"
 const theme = {
   colorPrimary: "#ffe000",
   colorSecondary: "#8cd4ff",
+  colorSecondaryHover: "#71add1",
   colorBlack: "#171717",
   colorDark: "#383838",
   colorMedium: "#cfcfcf",

@@ -58,7 +58,7 @@ const HeaderLogo = styled.img`
 `
 
 const Header = () => (
-  <StyledHeader>
+  <StyledHeader id="header">
     <ScreenReaderDiv href="#main-content" tabindex="0">
       Skip to Main Content
     </ScreenReaderDiv>
