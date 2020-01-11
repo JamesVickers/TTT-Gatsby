@@ -90,7 +90,9 @@ const Header = () => (
       <Link to="/articles" aria-label="Clickable link to the Articles page">
         Articles
       </Link>
-      <li aria-label="Clickable link to the Contact page">Contact</li>
+      <Link to="/contact" aria-label="Clickable link to the Contact page">
+        Contact
+      </Link>
     </DesktopNav>
   </StyledHeader>
 )
