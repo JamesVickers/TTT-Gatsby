@@ -43,13 +43,17 @@ const Pricing = props => (
         </li>
         <li>
           Contact us using the contact form on our website
-          <a href="/" target="_blank">
+          <a href="/" target="_blank" rel="noopener noreferrer">
             here
           </a>
         </li>
         <li>
           Drop us a private message on our Treetops Tech Facebook page
-          <a href="https://www.facebook.com/treetopstech" target="_blank">
+          <a
+            href="https://www.facebook.com/treetopstech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             here
           </a>
         </li>
