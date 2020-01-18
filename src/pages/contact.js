@@ -34,7 +34,11 @@ const Contact = props => (
     <p>Get in touch to start your journey.</p>
 
     <CardStyles>
-      <form id="contactForm" method="POST" action="/send">
+      <form
+        id="contactForm"
+        method="POST"
+        action="https://formspree.io/mbjgzqgv"
+      >
         <h3
           tabindex="0"
           aria-label="Complete the following form to contact Treetops Tech"
@@ -69,7 +73,7 @@ const Contact = props => (
             <input
               type="email"
               autocomplete="off"
-              name="email"
+              name="_replyto"
               required
               tabindex="0"
               aria-label="Input area for your Email Address"
@@ -123,7 +127,11 @@ const Contact = props => (
       </li>
       <li>
         Drop us a private message on our Treetops Tech Facebook page
-        <a href="https://www.facebook.com/treetopstech" target="_blank">
+        <a
+          href="https://www.facebook.com/treetopstech"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           here
         </a>
       </li>

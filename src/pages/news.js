@@ -28,7 +28,11 @@ const Pricing = props => (
     <p>We are constantly updating this page with our latest news and ideas.</p>
     <p>
       Follow the Treetops Tech Facebook page
-      <a href="https://www.facebook.com/treetopstech" target="_blank">
+      <a
+        href="https://www.facebook.com/treetopstech"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         here
       </a>
       to keep up to date with all our latest announcements, or simply scroll

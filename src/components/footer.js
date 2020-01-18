@@ -56,9 +56,10 @@ const Footer = () => (
       </li>
       <li>
         <a
-          to="https://www.facebook.com/treetopstech"
+          href="https://www.facebook.com/treetopstech"
           aria-label="Clickable link to the Contact us page"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FontAwesomeIcon
             icon={faFacebookSquare}

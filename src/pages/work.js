@@ -6,7 +6,6 @@ import WorkExampleBrewces from "../components/workExampleBrewces"
 import WorkExampleBochiBochi from "../components/workExampleBochiBochi"
 import WorkExampleApp from "../components/workExampleApp"
 import WorkExampleFreelance from "../components/workExampleFreelance"
-import BackToTopButton from "../components/backToTopButton"
 import Footer from "../components/footer"
 import HexButtonLeft from "../images/hex-button-left.png"
 import HexButtonRight from "../images/hex-button-right.png"
@@ -47,7 +46,7 @@ function Work() {
     }
   }
   function incrementIndex() {
-    if (workImgNumber == 3) {
+    if (workImgNumber === 3) {
       setWork(0)
     } else {
       setWork(workImgNumber + 1)

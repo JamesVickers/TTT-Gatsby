@@ -20,6 +20,7 @@ const Article_1 = props => (
         <a
           href="https://hostingtribunal.com/blog/how-many-blogs/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           (https://hostingtribunal.com/blog/how-many-blogs/)
         </a>
@@ -31,6 +32,7 @@ const Article_1 = props => (
         <a
           href="https://www.worldometers.info/world-population/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           half of these
         </a>
