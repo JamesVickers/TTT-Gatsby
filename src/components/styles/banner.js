@@ -5,7 +5,7 @@ const BannerStyles = styled.div`
   position: relative;
   text-align: center;
   img {
-    width: 100%;
+    width: 70%;
   }
   h2 {
     font-family: "title-font";

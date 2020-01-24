@@ -12,20 +12,20 @@ const CardStyles = styled.div`
   /*background-image: url("/img/hexellence.png");*/
   border-radius: 10px;
   margin: 40px auto;
+  padding: 30px 0;
   h3 {
     max-width: 80%;
-    margin: 30px 0 30px 0;
+    margin-top: 0;
   }
   a {
     color: $color-dark;
     text-decoration: none;
   }
   p {
+    margin-bottom: 0;
     width: 80%;
-    margin: 0 0 20px 0;
-    &:last-child {
-      margin-bottom: 30px;
-    }
+    &:first-of-type {
+      margin-top: 0;
   }
 `
 export default CardStyles

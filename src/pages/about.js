@@ -19,7 +19,6 @@ const ProfileImage = styled.img`
   height: 181px;
   margin-bottom: 30px;
 `
-
 const About = props => (
   <Layout>
     <SEO title="about" />

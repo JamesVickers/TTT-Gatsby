@@ -12,7 +12,7 @@ import HexButtonRight from "../images/hex-button-right.png"
 
 const HexButtonDiv = styled.div`
   max-width: 740px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,9 +20,14 @@ const HexButtonDiv = styled.div`
     background: ${props => props.theme.colorLight};
     border: none;
     padding: 0;
+    margin: 15px 15px 10px 15px;
+    height: 74px;
+    width: 64px;
+    &:focus {
+      outline: none;
+    }
   }
   img {
-    margin: 15px 15px 10px 15px;
     &:hover {
       cursor: pointer;
       transition: transform 0.2s;
