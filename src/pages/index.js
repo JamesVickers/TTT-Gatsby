@@ -12,7 +12,7 @@ const IndexTitle = styled.div`
   align-items: center;
   h1 {
     font-family: "title-font";
-    font-size: 3.8em;
+    font-size: 4rem;
     color: ${props => props.theme.colorDark};
     text-shadow: 2px 2px 0px ${props => props.theme.colorPrimary};
     text-align: center;
