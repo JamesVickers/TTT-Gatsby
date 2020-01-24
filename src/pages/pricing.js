@@ -26,16 +26,16 @@ const Pricing = props => (
       style={{ height: "50px", width: "50px", color: "#FFE000" }}
     />
 
+    <p>
+      We offer a wide range of products and services, which we price according
+      to your specific requirements.
+    </p>
+    <p>
+      For tailor-made solutions, including custom built sites, applications and
+      freelance work rates, it's best to contact us for a free quote:
+    </p>
+
     <CardStyles>
-      <h2>Our pricing</h2>
-      <p>
-        We offer a wide range of products and services, which we price according
-        to your specific requirements.
-      </p>
-      <p>
-        For tailor-made solutions, including custom built sites, applications
-        and freelance work rates, it's best to contact us for a free quote:
-      </p>
       <ul>
         <li>
           Email or call us using the contact details in the footer of our
@@ -58,8 +58,9 @@ const Pricing = props => (
           </a>
         </li>
       </ul>
-      <p>Thank you.</p>
     </CardStyles>
+
+    <p>Thank you.</p>
 
     <HexFallingLeft />
 

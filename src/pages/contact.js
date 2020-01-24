@@ -120,22 +120,25 @@ const Contact = props => (
     </CardStyles>
 
     <p>If you prefer, you can contact us using one of our other channels:</p>
-    <ul>
-      <li>
-        Email or call us using the contact details in the footer of our website
-        <a href="#footer">here</a>
-      </li>
-      <li>
-        Drop us a private message on our Treetops Tech Facebook page
-        <a
-          href="https://www.facebook.com/treetopstech"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          here
-        </a>
-      </li>
-    </ul>
+    <CardStyles>
+      <ul>
+        <li>
+          Email or call us using the contact details in the footer of our
+          website
+          <a href="#footer">here</a>
+        </li>
+        <li>
+          Drop us a private message on our Treetops Tech Facebook page
+          <a
+            href="https://www.facebook.com/treetopstech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
+        </li>
+      </ul>
+    </CardStyles>
     <p>Thank you.</p>
 
     <HexFallingLeft />
