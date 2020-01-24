@@ -25,7 +25,8 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 14px; /* fallback */
+    font-size: min(max(14px, 4vw), 18px);
     overflow-y: scroll;
   }
   *, *:before, *:after {
@@ -33,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: "Overpass", sans-serif;
-    font-size: 1.4rem;
     margin: 0;
     line-height: 1.5;
 

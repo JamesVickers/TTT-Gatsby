@@ -11,19 +11,23 @@ import HexButtonLeft from "../images/hex-button-left.png"
 import HexButtonRight from "../images/hex-button-right.png"
 
 const HexButtonDiv = styled.div`
-  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  button {
+    background: ${props => props.theme.colorLight};
+    border: none;
+    padding: 0;
+  }
   img {
-    margin: 20px;
+    margin: 15px 15px 10px 15px;
     &:hover {
       cursor: pointer;
       transition: transform 0.2s;
       transform: scale(1.1);
     }
-  }
-  h2 {
-    padding: 4px;
   }
 `
 
