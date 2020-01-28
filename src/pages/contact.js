@@ -34,6 +34,12 @@ const Contact = props => (
     <p>Get in touch to start your journey.</p>
 
     <CardStyles>
+      {/* script for recaptcha */}
+      <script
+        src="https://www.google.com/recaptcha/api.js"
+        async
+        defer
+      ></script>
       <form
         id="contactForm"
         method="POST"
@@ -112,6 +118,11 @@ const Contact = props => (
               aria-label="Checkbox giving consent for Treetops to store my details for contact purposes"
             />
           </li>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LeQbtMUAAAAAPcOFkWQ9T2EYyai_HYfE6_YLfBP"
+          ></div>
+          <br />
           <button type="submit" tabindex="0">
             Submit
           </button>
