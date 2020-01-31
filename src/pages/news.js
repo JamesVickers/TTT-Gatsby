@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
@@ -8,6 +9,12 @@ import BannerStyles from "../components/styles/banner"
 import HexFallingLeft from "../components/hexFallingLeft"
 import Footer from "../components/footer"
 import BannerImageBird from "../images/banner-img-bird.png"
+
+const CloudinayImageStyles = styled.img`
+  height: auto;
+  width: 50%;
+  max-width: 500px;
+`
 
 const News = (props, { data }) => (
   <Layout>
@@ -43,9 +50,6 @@ const News = (props, { data }) => (
     <StaticQuery
       query={graphql`
         query CloudinaryImageQuery {
-          sitePlugin {
-            id
-          }
           allCloudinaryMedia {
             nodes {
               secure_url
@@ -55,10 +59,18 @@ const News = (props, { data }) => (
       `}
       render={data => (
         <header>
-          <h2>{data.sitePlugin.id}</h2>
-          <h2>{data.allCloudinaryMedia.nodes[0].secure_url}</h2>
+          <CloudinayImageStyles
+            src={data.allCloudinaryMedia.nodes[0].secure_url}
+          />
         </header>
       )}
+
+      //   render={data => (
+      //     <div>
+      //       {data.allCloudinaryMedia.nodes.forEach(url => <CloudinayImageStyles src={data.allCloudinaryMedia.nodes} />)}
+      //         </div>
+      //              )}
+      // />
     />
 
     <HexFallingLeft />
