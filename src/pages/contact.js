@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
@@ -8,6 +9,61 @@ import CardStyles from "../components/styles/card"
 import HexFallingLeft from "../components/hexFallingLeft"
 import Footer from "../components/footer"
 import BannerImageFlowers from "../images/banner-img-flowers.png"
+
+const ContactFormStyles = styled.form`
+  h3 {
+    margin: 0 auto;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    &:last-of-type {
+      flex-direction: row-reverse;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:last-of-type label {
+      margin-left: 10px;
+    }
+  }
+  textarea,
+  input {
+    padding: 5px;
+    border: 1.5px solid ${props => props.theme.colorMedium};
+    border-radius: 5px;
+  }
+  textarea:focus,
+  input:focus {
+    outline: none;
+    border: 3px solid ${props => props.theme.colorSecondary};
+  }
+  textarea {
+    resize: none;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  input::placeholder {
+    color: ${props => props.theme.colorPrimary};
+  }
+  button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 20px;
+    border-radius: 5px;
+    outline: none;
+    background: ${props => props.theme.colorSecondary};
+    border: none;
+    color: ${props => props.theme.colorDark};
+    &:focus,
+    &:hover {
+      background-color: ${props => props.theme.colorPrimary};
+    }
+  }
+`
 
 const Contact = props => (
   <Layout>
@@ -40,7 +96,7 @@ const Contact = props => (
         async
         defer
       ></script>
-      <form
+      <ContactFormStyles
         id="contactForm"
         method="POST"
         action="https://formspree.io/mbjgzqgv"
@@ -106,12 +162,13 @@ const Contact = props => (
             ></textarea>
           </li>
           <li>
-            <label aria-hidden="true">
+            <label for="consent" aria-hidden="true">
               I consent for Treetops to store my details for contact purposes
             </label>
             <input
               type="checkbox"
               name="consent"
+              id="consent"
               value="True, I consent."
               required
               tabindex="0"
@@ -127,11 +184,11 @@ const Contact = props => (
             Submit
           </button>
         </ul>
-      </form>
+      </ContactFormStyles>
     </CardStyles>
 
-    <p>If you prefer, you can contact us using one of our other channels:</p>
     <CardStyles>
+      <p>If you prefer, you can contact us using one of our other channels:</p>
       <ul>
         <li>
           Email or call us using the contact details in the footer of our
