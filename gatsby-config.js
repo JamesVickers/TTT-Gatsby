@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Treetops Tech`,
@@ -35,6 +37,15 @@ module.exports = {
         // Disable the loading spinner.
         showSpinner: false,
         trickle: false,
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
+        apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
+        resourceType: `image`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

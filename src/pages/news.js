@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
@@ -8,7 +9,7 @@ import HexFallingLeft from "../components/hexFallingLeft"
 import Footer from "../components/footer"
 import BannerImageBird from "../images/banner-img-bird.png"
 
-const Pricing = props => (
+const News = (props, { data }) => (
   <Layout>
     <SEO title="about" />
     <BannerStyles>
@@ -39,10 +40,31 @@ const Pricing = props => (
       through the feed below.
     </p>
 
+    <StaticQuery
+      query={graphql`
+        query CloudinaryImageQuery {
+          sitePlugin {
+            id
+          }
+          allCloudinaryMedia {
+            nodes {
+              secure_url
+            }
+          }
+        }
+      `}
+      render={data => (
+        <header>
+          <h2>{data.sitePlugin.id}</h2>
+          <h2>{data.allCloudinaryMedia.nodes[0].secure_url}</h2>
+        </header>
+      )}
+    />
+
     <HexFallingLeft />
 
     <Footer />
   </Layout>
 )
 
-export default Pricing
+export default News
