@@ -10,12 +10,6 @@ import HexFallingLeft from "../components/hexFallingLeft"
 import Footer from "../components/footer"
 import BannerImageBird from "../images/banner-img-bird.png"
 
-const CloudinayImageStyles = styled.img`
-  height: auto;
-  width: 50%;
-  max-width: 500px;
-`
-
 const News = (props, { data }) => (
   <Layout>
     <SEO title="about" />
@@ -58,19 +52,19 @@ const News = (props, { data }) => (
         }
       `}
       render={data => (
-        <header>
-          <CloudinayImageStyles
-            src={data.allCloudinaryMedia.nodes[0].secure_url}
-          />
-        </header>
+        <ul>
+          {data.allCloudinaryMedia.nodes.map(function(name, index) {
+            const imageStyle = {
+              width: "90%",
+              height: "auto",
+              maxWidth: "450px",
+              maxHeight: "450px",
+              margin: "10px",
+            }
+            return <img src={name.secure_url} style={imageStyle} />
+          })}
+        </ul>
       )}
-
-      //   render={data => (
-      //     <div>
-      //       {data.allCloudinaryMedia.nodes.forEach(url => <CloudinayImageStyles src={data.allCloudinaryMedia.nodes} />)}
-      //         </div>
-      //              )}
-      // />
     />
 
     <HexFallingLeft />
