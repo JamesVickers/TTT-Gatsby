@@ -61,7 +61,7 @@ const DesktopNav = styled.ul`
 const HeaderLogo = styled.img`
   height: 76px;
   width: 71px;
-  margin: 0 20px;
+  margin: 10px 20px 0 20px;
   align-self: center;
   &:hover {
     cursor: pointer;
