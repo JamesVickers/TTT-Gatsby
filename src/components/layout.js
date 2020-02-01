@@ -48,6 +48,10 @@ const GlobalStyle = createGlobalStyle`
   max-width: 550px;
   margin: 30px auto 0 auto;
   }
+  ul {
+    padding: 0;
+    
+  }
 `
 const Main = styled.div`
   text-align: center;
