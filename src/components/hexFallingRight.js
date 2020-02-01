@@ -4,6 +4,7 @@ import HexRight from "../images/hex-falling-right.png"
 
 const HexFallingRightStyles = styled.img`
   width: 240px;
+  margin: 20px 0;
 `
 
 const HexFallingRight = () => (
