@@ -14,6 +14,11 @@ const ContactFormStyles = styled.form`
   h3 {
     margin: 0 auto;
   }
+  ul {
+    width: 90%;
+    max-width: 450px;
+    margin: 15px auto;
+  }
   li {
     display: flex;
     flex-direction: column;
@@ -37,14 +42,14 @@ const ContactFormStyles = styled.form`
   textarea:focus,
   input:focus {
     outline: none;
-    border: 3px solid ${props => props.theme.colorSecondary};
+    border: 1.5px solid ${props => props.theme.colorSecondary};
   }
   textarea {
     resize: none;
   }
   input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
   }
   input::placeholder {
     color: ${props => props.theme.colorPrimary};

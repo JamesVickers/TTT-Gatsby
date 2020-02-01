@@ -48,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
   max-width: 550px;
   margin: 30px auto 0 auto;
   }
+  button {
+    font-family: "Overpass", sans-serif;
+    font-size: 14px; /* fallback */
+    font-size: min(max(14px, 4vw), 18px);
+  }
 `
 const Main = styled.div`
   text-align: center;
