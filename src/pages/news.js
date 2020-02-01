@@ -9,7 +9,7 @@ import Footer from "../components/footer"
 import BannerImageBird from "../images/banner-img-bird.png"
 
 const Pricing = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img

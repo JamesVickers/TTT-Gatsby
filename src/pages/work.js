@@ -63,7 +63,7 @@ function Work() {
   }
 
   return (
-    <Layout>
+    <Layout location={props.location}>
       <SEO title="work" />
       <HexButtonDiv>
         <button onClick={() => decrementIndex()}>

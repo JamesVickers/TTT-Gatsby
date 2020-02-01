@@ -11,7 +11,7 @@ import Footer from "../components/footer"
 import BannerImageBook from "../images/banner-img-book.png"
 
 const Articles = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img

@@ -66,6 +66,10 @@ const Page = styled.div`
 class Layout extends Component {
   state = {}
   render() {
+    console.log(`Location Component path:`, this.props.location.pathname)
+    {
+      /*need to pass this pathname to footer component*/
+    }
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />

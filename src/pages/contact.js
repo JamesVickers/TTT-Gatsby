@@ -71,7 +71,7 @@ const ContactFormStyles = styled.form`
 `
 
 const Contact = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img
