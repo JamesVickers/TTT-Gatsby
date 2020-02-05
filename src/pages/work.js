@@ -82,7 +82,7 @@ function Work(props) {
       </HexButtonDiv>
       {examplesArray[workImgNumber]}
 
-      <Footer />
+      <Footer path={props.location.pathname} />
     </Layout>
   )
 }

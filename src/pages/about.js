@@ -89,7 +89,7 @@ const About = props => (
 
     <HexFallingRight />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

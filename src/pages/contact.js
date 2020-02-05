@@ -216,7 +216,7 @@ const Contact = props => (
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

@@ -29,9 +29,9 @@ const FooterDiv = styled.div`
   }
 `
 
-const Footer = () => (
+const Footer = props => (
   <FooterDiv id="footer">
-    <BackToTopButton />
+    <BackToTopButton path={props.path} />
     <ul className="footer-ul">
       <li>
         <Link to="/contact" aria-label="Clickable link to the Contact us page">
@@ -80,5 +80,6 @@ const Footer = () => (
     </ul>
   </FooterDiv>
 )
+console.log("Footer props", Footer.props)
 
 export default Footer

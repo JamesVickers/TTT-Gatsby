@@ -67,15 +67,17 @@ class Layout extends Component {
   state = {}
   render() {
     console.log(`Location Component path:`, this.props.location.pathname)
+    console.log("props:", this.props)
+    console.log("children:", this.props.children)
     {
       /*need to pass this pathname to footer component*/
     }
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Page>
+        <Page path={this.props.location.pathname}>
           <Header />
-          <Main>{this.props.children}</Main>
+          <Main path={this.props.location.pathname}>{this.props.children}</Main>
         </Page>
       </ThemeProvider>
     )

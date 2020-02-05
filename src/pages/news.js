@@ -41,7 +41,7 @@ const Pricing = props => (
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

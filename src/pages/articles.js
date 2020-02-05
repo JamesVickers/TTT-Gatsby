@@ -49,7 +49,7 @@ const Articles = props => (
     </CardStyles>
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

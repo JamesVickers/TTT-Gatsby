@@ -15,7 +15,7 @@ const BackToTopButtonStyles = styled(GatsbyLink)`
 `
 
 const BackToTopButton = props => (
-  <BackToTopButtonStyles to={props.location}>Back to top</BackToTopButtonStyles>
+  <a href={`${props.path}#header`}>Back to top</a>
 )
 
 export default BackToTopButton
