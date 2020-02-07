@@ -20,7 +20,7 @@ const ProfileImage = styled.img`
   margin-bottom: 30px;
 `
 const About = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img
@@ -89,7 +89,7 @@ const About = props => (
 
     <HexFallingRight />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

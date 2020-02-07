@@ -36,8 +36,8 @@ const HomepageBackgroundImage = styled.img`
   left: 20px;
 `
 
-const Home = () => (
-  <Layout>
+const Home = props => (
+  <Layout location={props.location}>
     <SEO title="home" />
 
     <HomepageBackgroundImage

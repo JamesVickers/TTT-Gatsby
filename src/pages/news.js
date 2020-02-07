@@ -69,7 +69,7 @@ const News = (props, { data }) => (
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

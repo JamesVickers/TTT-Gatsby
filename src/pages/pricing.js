@@ -10,7 +10,7 @@ import Footer from "../components/footer"
 import BannerImageTreeAbove from "../images/banner-img-tree-above.png"
 
 const Pricing = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img
@@ -64,7 +64,7 @@ const Pricing = props => (
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

@@ -55,6 +55,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     
   }
+  button {
+    font-family: "Overpass", sans-serif;
+    font-size: 14px; /* fallback */
+    font-size: min(max(14px, 4vw), 18px);
+  }
 `
 const Main = styled.div`
   text-align: center;
@@ -68,12 +73,13 @@ const Page = styled.div`
 class Layout extends Component {
   state = {}
   render() {
+    const page = this.props.location.pathname
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Page>
           <Header />
-          <Main>{this.props.children}</Main>
+          <Main path={page}>{this.props.children}</Main>
         </Page>
       </ThemeProvider>
     )

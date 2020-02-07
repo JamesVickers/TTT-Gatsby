@@ -43,7 +43,7 @@ const examplesArray = [
   <WorkExampleFreelance />,
 ]
 
-function Work() {
+function Work(props) {
   const [workImgNumber, setWork] = useState(0)
 
   //loop through index 0-3 of examplesArray- don't allow anything outside this index range
@@ -63,7 +63,7 @@ function Work() {
   }
 
   return (
-    <Layout>
+    <Layout location={props.location}>
       <SEO title="work" />
       <HexButtonDiv>
         <button onClick={() => decrementIndex()}>
@@ -82,7 +82,7 @@ function Work() {
       </HexButtonDiv>
       {examplesArray[workImgNumber]}
 
-      <Footer />
+      <Footer path={props.location.pathname} />
     </Layout>
   )
 }
