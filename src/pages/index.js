@@ -6,10 +6,12 @@ import homeImageBG from "../images/forest_fog.png"
 
 const IndexTitle = styled.div`
   width: 70%;
+  height: 65vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   h1 {
     font-family: "title-font";
     font-size: 4rem;
