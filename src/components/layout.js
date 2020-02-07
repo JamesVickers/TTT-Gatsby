@@ -66,18 +66,13 @@ const Page = styled.div`
 class Layout extends Component {
   state = {}
   render() {
-    console.log(`Location Component path:`, this.props.location.pathname)
-    console.log("props:", this.props)
-    console.log("children:", this.props.children)
-    {
-      /*need to pass this pathname to footer component*/
-    }
+    const page = this.props.location.pathname
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Page path={this.props.location.pathname}>
+        <Page>
           <Header />
-          <Main path={this.props.location.pathname}>{this.props.children}</Main>
+          <Main path={page}>{this.props.children}</Main>
         </Page>
       </ThemeProvider>
     )

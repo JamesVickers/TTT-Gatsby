@@ -1,8 +1,7 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 
-const BackToTopButtonStyles = styled(GatsbyLink)`
+const BackToTopButtonStyles = styled.a`
   width: 120px;
   text-decoration: none;
   padding: 15px;
@@ -15,7 +14,9 @@ const BackToTopButtonStyles = styled(GatsbyLink)`
 `
 
 const BackToTopButton = props => (
-  <a href={`${props.path}#header`}>Back to top</a>
+  <BackToTopButtonStyles href={`${props.path}#header`}>
+    Back to top
+  </BackToTopButtonStyles>
 )
 
 export default BackToTopButton
