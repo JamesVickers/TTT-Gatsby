@@ -34,17 +34,18 @@ const Articles = props => (
 
     <CardStyles>
       <Link to="/articles/article_1">
-        <span>Article &#35;1</span>There are not enough Tech blogs in the world
+        <span>Article &#35;1</span>&nbsp;There are not enough Tech blogs in the
+        world
       </Link>
     </CardStyles>
     <CardStyles>
       <Link to="/articles/article_2">
-        <span>Article &#35;2</span>How to improve your programming skils
+        <span>Article &#35;2</span>&nbsp;How to improve your programming skils
       </Link>
     </CardStyles>
     <CardStyles>
       <Link to="/articles/article_3">
-        <span>Article &#35;3</span>Reasons to start a Tech blog
+        <span>Article &#35;3</span>&nbsp;Reasons to start a Tech blog
       </Link>
     </CardStyles>
     <HexFallingLeft />

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
@@ -43,9 +44,7 @@ const Pricing = props => (
         </li>
         <li>
           Contact us using the contact form on our website
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            here
-          </a>
+          <Link to="/contact">here</Link>
         </li>
         <li>
           Drop us a private message on our Treetops Tech Facebook page

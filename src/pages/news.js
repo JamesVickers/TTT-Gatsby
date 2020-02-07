@@ -10,13 +10,23 @@ import HexFallingLeft from "../components/hexFallingLeft"
 import Footer from "../components/footer"
 import BannerImageBird from "../images/banner-img-bird.png"
 
+const InlineAnchorStyles = styled.a`
+  margin: 5px;
+  color: ${props => props.theme.colorDark};
+  border-bottom: 1px solid ${props => props.theme.colorDark};
+  text-decoration: none;
+  &:hover {
+    color: ${props => props.theme.colorSecondary};
+    border-color: ${props => props.theme.colorSecondary};
+`
+
 const News = (props, { data }) => (
   <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img
         src={BannerImageBird}
-        alt="A small songbirn perched on a log"
+        alt="A small songbird perched on a log"
         aria-hidden="true"
       />
       <h2 tabindex="0">News</h2>
@@ -30,13 +40,13 @@ const News = (props, { data }) => (
     <p>We are constantly updating this page with our latest news and ideas.</p>
     <p>
       Follow the Treetops Tech Facebook page
-      <a
+      <InlineAnchorStyles
         href="https://www.facebook.com/treetopstech"
         target="_blank"
         rel="noopener noreferrer"
       >
         here
-      </a>
+      </InlineAnchorStyles>
       to keep up to date with all our latest announcements, or simply scroll
       through the feed below.
     </p>
