@@ -11,7 +11,7 @@ import Footer from "../components/footer"
 import BannerImageBird from "../images/banner-img-bird.png"
 
 const News = (props, { data }) => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
     <BannerStyles>
       <img
