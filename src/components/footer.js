@@ -7,7 +7,7 @@ import BackToTopButton from "../components/backToTopButton"
 
 const FooterDiv = styled.div`
   flex-shrink: 0;
-  margin-top: 40px;
+  margin-top: 20px;
   ul {
     width: 90%;
     margin: 50px auto 0 auto;

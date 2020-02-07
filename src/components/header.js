@@ -25,7 +25,7 @@ const ScreenReaderDiv = styled.a`
   }
 `
 const StyledHeader = styled.div`
-  padding: 30px 20%;
+  padding: 20px 20%;
   display: flex;
   justify-content: center;
   background: rgba(239, 239, 239, 0.9);
@@ -38,20 +38,31 @@ const StyledHeader = styled.div`
 const DesktopNav = styled.ul`
   font-family: "Abel", sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   flex-grow: 1;
+  text-align: center;
   align-items: center;
   justify-content: space-around;
-  width: 350px;
+  max-width: 350px;
   list-style-type: none;
   padding: 0;
-  li:hover {
+  a {
+    width: 50px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: ${props => props.theme.colorDark};
+  }
+  a:hover {
     cursor: pointer;
+    border-top: 1px solid ${props => props.theme.colorDark};
+    border-bottom: 1px solid ${props => props.theme.colorDark};
   }
 `
 const HeaderLogo = styled.img`
   height: 76px;
   width: 71px;
+  margin: 10px 20px 0 20px;
+  align-self: center;
   &:hover {
     cursor: pointer;
   }

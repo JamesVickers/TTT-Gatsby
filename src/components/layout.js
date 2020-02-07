@@ -43,10 +43,13 @@ const GlobalStyle = createGlobalStyle`
   html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
   }
+  h2 {
+    margin: 20px 0;
+  }
   p {
   width: 95%;
   max-width: 550px;
-  margin: 30px auto 0 auto;
+  margin: 20px auto 0 auto;
   }
   ul {
     padding: 0;

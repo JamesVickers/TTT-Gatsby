@@ -18,10 +18,12 @@ const CardStyles = styled.div`
     margin-top: 0;
   }
   a {
-    color: ${props => props.theme.colorSecondary};
+    color: ${props => props.theme.colorDark};
+    border-bottom: 1px solid ${props => props.theme.colorDark};
     text-decoration: none;
     &:hover {
-      color: ${props => props.theme.colorPrimary};
+      color: ${props => props.theme.colorSecondary};
+      border-color: ${props => props.theme.colorSecondary};
     }
   }
   p {
@@ -40,7 +42,7 @@ const CardStyles = styled.div`
     list-style-type: none;
     margin-top: 10px;
     a {
-      padding: 0 5px;
+      margin: 0 5px;
     }
   }
 `

@@ -4,6 +4,7 @@ import HexLeft from "../images/hex-falling-left.png"
 
 const HexFallingLeftStyles = styled.img`
   width: 240px;
+  margin: 20px 0;
 `
 const HexFallingLeft = () => (
   <HexFallingLeftStyles
