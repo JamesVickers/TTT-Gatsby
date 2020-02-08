@@ -38,22 +38,8 @@ const Footer = props => (
           Contact us
         </Link>
       </li>
-      <li>
-        <Link
-          to="mailto:support@treetops.tech"
-          aria-label="Clickable link to email Treetops Tech"
-        >
-          support@treetops.tech
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/contact"
-          aria-label="Treetops Tech telephone number 01538 266395"
-        >
-          01538 266395
-        </Link>
-      </li>
+      <li>support@treetops.tech</li>
+      <li>01538 266395</li>
       <li>
         <a
           href="https://www.facebook.com/treetopstech"

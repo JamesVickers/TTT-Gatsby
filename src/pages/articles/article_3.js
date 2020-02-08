@@ -3,15 +3,16 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import CardStyles from "../../components/styles/card"
+import ArticleCardStyles from "../../components/styles/articleCard"
 import ArticleLinkStyles from "../../components/styles/articleLink"
 import HexFallingLeft from "../../components/hexFallingLeft"
 import Footer from "../../components/footer"
 
 const Article_3 = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
 
-    <CardStyles>
+    <ArticleCardStyles>
       <h3>Reasons to start a tech blog</h3>
 
       <p>In no particular order:</p>
@@ -113,18 +114,16 @@ const Article_3 = props => (
       </p>
 
       <p>
-        ** For more inspiration, see our blog post: There are not enough blogs
-        in the world
+        ** For more inspiration
+        <ArticleLinkStyles href="/articles">
+          view our other Articles here
+        </ArticleLinkStyles>
       </p>
-    </CardStyles>
-
-    <ArticleLinkStyles href="/articles#articlesListStart">
-      View our other Articles here
-    </ArticleLinkStyles>
+    </ArticleCardStyles>
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

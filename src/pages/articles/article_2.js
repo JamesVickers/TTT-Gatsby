@@ -2,22 +2,30 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import CardStyles from "../../components/styles/card"
+import ArticleCardStyles from "../../components/styles/articleCard"
 import ArticleLinkStyles from "../../components/styles/articleLink"
 import HexFallingLeft from "../../components/hexFallingLeft"
 import Footer from "../../components/footer"
 
 const Article_2 = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
 
-    <CardStyles>
+    <ArticleCardStyles>
       <h3>How to improve your programming skills</h3>
       <p>
         The world is run by computers, this fact is hard to ignore. Cars,
         factories, communication devices all rely on software and so much data
         is passed across the internet each day it is difficult to comprehend
-        (https://www.domo.com/learn/data-never-sleeps-7).
+      </p>
+      <p>
+        <ArticleLinkStyles
+          href="https://www.domo.com/learn/data-never-sleeps-7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.domo.com/learn/data-never-sleeps-7
+        </ArticleLinkStyles>
       </p>
       <p>
         The workings behind the scenes, however, relies on humans writing lines
@@ -164,15 +172,18 @@ const Article_2 = props => (
         there!
       </p>
       <p>Happy coding!</p>
-    </CardStyles>
 
-    <ArticleLinkStyles href="/articles#articlesListStart">
-      View our other Articles here
-    </ArticleLinkStyles>
+      <p>
+        ** For more inspiration
+        <ArticleLinkStyles href="/articles">
+          view our other Articles here
+        </ArticleLinkStyles>
+      </p>
+    </ArticleCardStyles>
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

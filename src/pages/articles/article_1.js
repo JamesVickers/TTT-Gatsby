@@ -1,42 +1,37 @@
 import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import CardStyles from "../../components/styles/card"
+import ArticleCardStyles from "../../components/styles/articleCard"
 import ArticleLinkStyles from "../../components/styles/articleLink"
 import HexFallingLeft from "../../components/hexFallingLeft"
 import Footer from "../../components/footer"
 
 const Article_1 = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
 
-    <CardStyles>
+    <ArticleCardStyles>
       <h3>There are not enough blogs in the world.</h3>
 
       <p>
         "To date, there are over 1.6 billion websites in the world and more than
         500 million are recognized as blogs. Their authors account for over 2
         million blog posts daily."
-        <a
+      </p>
+      <p>
+        <ArticleLinkStyles
           href="https://hostingtribunal.com/blog/how-many-blogs/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          (https://hostingtribunal.com/blog/how-many-blogs/)
-        </a>
+          https://hostingtribunal.com/blog/how-many-blogs/
+        </ArticleLinkStyles>
       </p>
 
       <p>
         The current population at the time of writing this blog post is
-        7.7billion, and it is estimated that around
-        <a
-          href="https://www.worldometers.info/world-population/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          half of these
-        </a>
-        people can access the internet.
+        7.7billion, and it is estimated that around half of these people can
+        access the internet.
       </p>
 
       <p>
@@ -71,17 +66,16 @@ const Article_1 = props => (
       </p>
 
       <p>
-        ** For more inspiration, see our blog post: Reasons to start a tech blog
+        ** For more inspiration
+        <ArticleLinkStyles href="/articles">
+          view our other Articles here
+        </ArticleLinkStyles>
       </p>
-    </CardStyles>
-
-    <ArticleLinkStyles href="/articles#articlesListStart">
-      View our other Articles here
-    </ArticleLinkStyles>
+    </ArticleCardStyles>
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 

@@ -16,7 +16,7 @@ const WorkExampleFreelance = () => (
     <CardStyles>
       <ulStyles>
         <li>HTML, CSS and JavaScript</li>
-        <li>React, Angular and Node.js</li>
+        <li>React, Angular and Node.js</li>{" "}
         <li>Wordpress, Analytics and Confirmit</li>
       </ulStyles>
     </CardStyles>
