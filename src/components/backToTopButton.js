@@ -7,7 +7,6 @@ const BackToTopButtonStyles = styled.a`
   padding: 15px;
   border-radius: 5px;
   background: ${props => props.theme.colorSecondary};
-
   &:hover {
     background: ${props => props.theme.colorDark};
   }

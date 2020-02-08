@@ -15,57 +15,52 @@ const ContactFormStyles = styled.form`
     margin: 0 auto;
   }
   ul {
-    width: 90%;
-    max-width: 450px;
-    margin: 15px auto;
-  }
-  li {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-    &:last-of-type {
-      flex-direction: row-reverse;
+    max-width: 400px;
+    li {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      &:last-of-type {
+        flex-direction: row-reverse;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:last-of-type label {
+        margin-left: 10px;
+      }
     }
-    &:last-of-type {
-      margin-bottom: 0;
+    textarea,
+    input {
+      padding: 5px;
+      border: 1.5px solid ${props => props.theme.colorMedium};
+      border-radius: 5px;
     }
-    &:last-of-type label {
-      margin-left: 10px;
+    textarea:focus,
+    input:focus {
+      outline: none;
+      border: 3px solid ${props => props.theme.colorSecondary};
     }
-  }
-  textarea,
-  input {
-    padding: 5px;
-    border: 1.5px solid ${props => props.theme.colorMedium};
-    border-radius: 5px;
-  }
-  textarea:focus,
-  input:focus {
-    outline: none;
-    border: 1.5px solid ${props => props.theme.colorSecondary};
-  }
-  textarea {
-    resize: none;
-  }
-  input[type="checkbox"] {
-    min-width: 20px;
-    min-height: 20px;
-  }
-  input::placeholder {
-    color: ${props => props.theme.colorPrimary};
-  }
-  button {
-    display: block;
-    margin: 10px auto;
-    padding: 15px 20px;
-    border-radius: 5px;
-    outline: none;
-    background: ${props => props.theme.colorSecondary};
-    border: none;
-    color: ${props => props.theme.colorDark};
-    &:focus,
-    &:hover {
-      background-color: ${props => props.theme.colorPrimary};
+    textarea {
+      resize: none;
+    }
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 15px 20px;
+      border-radius: 5px;
+      outline: none;
+      background: ${props => props.theme.colorSecondary};
+      border: none;
+      color: ${props => props.theme.colorDark};
+      &:focus,
+      &:hover {
+        background-color: ${props => props.theme.colorPrimary};
+      }
     }
   }
 `

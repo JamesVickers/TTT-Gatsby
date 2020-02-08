@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import CardStyles from "../../components/styles/card"
+import ArticleLinkStyles from "../../components/styles/articleLink"
 import HexFallingLeft from "../../components/hexFallingLeft"
 import Footer from "../../components/footer"
 
@@ -75,9 +75,9 @@ const Article_1 = props => (
       </p>
     </CardStyles>
 
-    <Link href="/articles#articlesListStart">
-      <h3>View our other Articles here</h3>
-    </Link>
+    <ArticleLinkStyles href="/articles#articlesListStart">
+      View our other Articles here
+    </ArticleLinkStyles>
 
     <HexFallingLeft />
 
