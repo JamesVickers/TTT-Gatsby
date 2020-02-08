@@ -80,6 +80,5 @@ const Footer = props => (
     </ul>
   </FooterDiv>
 )
-console.log("Footer props", Footer.props)
 
 export default Footer
