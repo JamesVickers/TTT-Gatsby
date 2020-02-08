@@ -49,7 +49,7 @@ const PrivacyCardStyles = styled.div`
 `
 
 const Privacy = props => (
-  <Layout>
+  <Layout location={props.location}>
     <SEO title="about" />
 
     <PrivacyTitleStyles>Privacy Policy</PrivacyTitleStyles>
@@ -183,7 +183,7 @@ const Privacy = props => (
 
     <HexFallingLeft />
 
-    <Footer />
+    <Footer path={props.location.pathname} />
   </Layout>
 )
 
