@@ -1,22 +1,65 @@
 import React from "react"
+import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CardStyles from "../components/styles/card"
 import HexFallingLeft from "../components/hexFallingLeft"
 import Footer from "../components/footer"
+
+const PrivacyTitleStyles = styled.h2`
+  font-family: "title-font";
+  margin-top: 40px;
+`
+
+const PrivacyCardStyles = styled.div`
+  max-width: 200px;
+  align-items: center;
+  width: 95%;
+  max-width: 550px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: ${props => props.theme.colorWhite};
+  /*background-image: url("/img/hexellence.png");*/
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 40px 0;
+  h3 {
+    max-width: 80%;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+    width: 80%;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0 30px 0 45px;
+    li:first-of-type {
+      margin-top: 20px;
+    }
+  }
+  li {
+    text-align: left;
+    margin-top: 10px;
+  }
+`
 
 const Privacy = props => (
   <Layout>
     <SEO title="about" />
 
-    <h2>Privacy Policy</h2>
-    <CardStyles>
+    <PrivacyTitleStyles>Privacy Policy</PrivacyTitleStyles>
+    <PrivacyCardStyles>
       <p>
         This privacy policy will detail how Treetops Tech use personal data that
         we collect from you when you use our website.
       </p>
+      <h3>Topics:</h3>
       <ul>
-        Topics:
         <li>What data we collect</li>
         <li>How we collect data</li>
         <li>How we use data</li>
@@ -136,7 +179,7 @@ const Privacy = props => (
         addressed your concern in a satisfactory manner, you may contact the
         Information Commissioner’s Office.
       </p>
-    </CardStyles>
+    </PrivacyCardStyles>
 
     <HexFallingLeft />
 
