@@ -6,6 +6,7 @@ import BrewcesDesktop from "../images/brewces-desktop.png"
 const DesktopExampleImage = styled.img`
   width: 90%;
   max-width: 700px;
+  box-shadow: ${props => props.theme.bs};
 `
 
 const WorkExampleBrewces = () => (

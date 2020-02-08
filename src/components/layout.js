@@ -13,7 +13,7 @@ const theme = {
   colorLight: "#efefef",
   colorWhite: "#ffffff",
   maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  bs: "0px 0px 10px 5px rgba(23, 23, 23, 0.2)",
 }
 
 const GlobalStyle = createGlobalStyle`

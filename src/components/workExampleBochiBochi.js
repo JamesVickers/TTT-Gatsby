@@ -6,6 +6,7 @@ import BochiBochiDesktop from "../images/bochi-bochi-desktop.png"
 const DesktopExampleImage = styled.img`
   width: 90%;
   max-width: 700px;
+  box-shadow: ${props => props.theme.bs};
 `
 
 const WorkExampleBochiBochi = () => (

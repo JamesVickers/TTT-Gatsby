@@ -9,7 +9,7 @@ const ArticleCardStyles = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${props => props.theme.colorWhite};
-  /*background-image: url("/img/hexellence.png");*/
+  box-shadow: ${props => props.theme.bs};
   border-radius: 10px;
   margin: 40px auto;
   padding: 40px 0;
