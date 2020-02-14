@@ -7,15 +7,17 @@
 // You can delete this file if you're not using it
 
 import React from "react"
+import runCookies from "./cookie"
 
 //export must be ES6 not CommonJS to work
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <script
       key="cookies"
-      type="text/javascript"
       src="https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js"
     />,
-    <script key="cookiejs" type="text/javascript" src="/cookie.js"></script>,
   ])
+  {
+    /*runCookies()*/
+  }
 }
