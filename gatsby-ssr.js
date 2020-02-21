@@ -14,6 +14,7 @@ import React from "react"
 //export must be ES6 not CommonJS to work
 export const onRenderBody = ({ setHeadComponents }) => {
   //const apiKeyOutside = process.env.GATSBY_CCC_TEST_API_KEY
+  //quote marks removed from env var
   setHeadComponents([
     <script
       key="cookies"

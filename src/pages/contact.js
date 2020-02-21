@@ -74,7 +74,7 @@ const Contact = props => (
         alt="close up of a group of jasmine flowers"
         aria-hidden="true"
       />
-      <h2 tabindex="0">contact</h2>
+      <h2 tabIndex="0">contact</h2>
     </BannerStyles>
 
     <FontAwesomeIcon
@@ -90,7 +90,7 @@ const Contact = props => (
     <p>Get in touch to start your journey.</p>
 
     <CardStyles>
-      {/* script for recaptcha */}
+      {/* script for recaptcha. Error for "class" property on g-recaptcha div. Needed for google? */}
       <script
         src="https://www.google.com/recaptcha/api.js"
         async
@@ -102,7 +102,7 @@ const Contact = props => (
         action="https://formspree.io/mbjgzqgv"
       >
         <h3
-          tabindex="0"
+          tabIndex="0"
           aria-label="Complete the following form to contact Treetops Tech"
         >
           Enquire today
@@ -113,10 +113,10 @@ const Contact = props => (
             <label aria-hidden="true">Name</label>
             <input
               type="text"
-              autocomplete="off"
+              autoComplete="off"
               name="name"
               required
-              tabindex="0"
+              tabIndex="0"
               aria-label="Input area for your Name"
             />
           </li>
@@ -124,9 +124,9 @@ const Contact = props => (
             <label aria-hidden="true">Company Name</label>
             <input
               type="text"
-              autocomplete="off"
+              autoComplete="off"
               name="company"
-              tabindex="0"
+              tabIndex="0"
               aria-label="Input area for your Company name"
             />
           </li>
@@ -134,10 +134,10 @@ const Contact = props => (
             <label aria-hidden="true">Email</label>
             <input
               type="email"
-              autocomplete="off"
+              autoComplete="off"
               name="_replyto"
               required
-              tabindex="0"
+              tabIndex="0"
               aria-label="Input area for your Email Address"
             />
           </li>
@@ -145,9 +145,9 @@ const Contact = props => (
             <label aria-hidden="true">Telephone</label>
             <input
               type="text"
-              autocomplete="off"
+              autoComplete="off"
               name="telephone"
-              tabindex="0"
+              tabIndex="0"
               aria-label="Input area for your Telephone number"
             />
           </li>
@@ -157,12 +157,12 @@ const Contact = props => (
               type="text"
               rows="6"
               name="message"
-              tabindex="0"
+              tabIndex="0"
               aria-label="Text area for your message or enquiry"
             ></textarea>
           </li>
           <li>
-            <label for="consent" aria-hidden="true">
+            <label htmlFor="consent" aria-hidden="true">
               I consent for Treetops to store my details for contact purposes
             </label>
             <input
@@ -171,7 +171,7 @@ const Contact = props => (
               id="consent"
               value="True, I consent."
               required
-              tabindex="0"
+              tabIndex="0"
               aria-label="Checkbox giving consent for Treetops to store my details for contact purposes"
             />
           </li>
@@ -180,7 +180,7 @@ const Contact = props => (
             data-sitekey="6LeQbtMUAAAAAPcOFkWQ9T2EYyai_HYfE6_YLfBP"
           ></div>
           <br />
-          <button type="submit" tabindex="0">
+          <button type="submit" tabIndex="0">
             Submit
           </button>
         </ul>

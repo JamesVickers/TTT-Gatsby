@@ -28,7 +28,7 @@ const About = props => (
         alt="close up of fern leaves"
         aria-hidden="true"
       />
-      <h2 tabindex="0">About</h2>
+      <h2 tabIndex="0">About</h2>
     </BannerStyles>
 
     <FontAwesomeIcon
@@ -74,7 +74,7 @@ const About = props => (
     </CardStyles>
 
     <CardStyles>
-      <h3>The design team</h3>
+      <h3>The Design Team</h3>
       <ProfileImage
         src={DesignerProfileImage}
         alt="profile image of the design team"
