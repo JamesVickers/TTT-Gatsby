@@ -19,7 +19,7 @@ const Articles = props => (
         alt="an open book on in a grassy field"
         aria-hidden="true"
       />
-      <h2 tabindex="0">Articles</h2>
+      <h2 tabIndex="0">Articles</h2>
     </BannerStyles>
 
     <FontAwesomeIcon

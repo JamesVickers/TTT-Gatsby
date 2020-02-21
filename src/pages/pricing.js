@@ -19,7 +19,7 @@ const Pricing = props => (
         alt="close up of a fir tree viewed from above"
         aria-hidden="true"
       />
-      <h2 tabindex="0">Pricing</h2>
+      <h2 tabIndex="0">Pricing</h2>
     </BannerStyles>
 
     <FontAwesomeIcon

@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import CardStyles from "../../components/styles/card"
 import ArticleCardStyles from "../../components/styles/articleCard"
 import ArticleLinkStyles from "../../components/styles/articleLink"
 import HexFallingLeft from "../../components/hexFallingLeft"

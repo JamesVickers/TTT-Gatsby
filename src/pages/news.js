@@ -29,7 +29,7 @@ const News = (props, { data }) => (
         alt="A small songbird perched on a log"
         aria-hidden="true"
       />
-      <h2 tabindex="0">News</h2>
+      <h2 tabIndex="0">News</h2>
     </BannerStyles>
 
     <FontAwesomeIcon
@@ -56,6 +56,11 @@ const News = (props, { data }) => (
         query CloudinaryImageQuery {
           allCloudinaryMedia {
             nodes {
+              context {
+                custom {
+                  alt
+                }
+              }
               secure_url
             }
           }
@@ -63,7 +68,7 @@ const News = (props, { data }) => (
       `}
       render={data => (
         <ul>
-          {data.allCloudinaryMedia.nodes.map(function(name, index) {
+          {data.allCloudinaryMedia.nodes.map(function(image, index) {
             const imageStyle = {
               width: "90%",
               height: "auto",
@@ -71,7 +76,14 @@ const News = (props, { data }) => (
               maxHeight: "450px",
               margin: "10px",
             }
-            return <img src={name.secure_url} style={imageStyle} />
+            return (
+              <img
+                key={image.secure_url}
+                src={image.secure_url}
+                style={imageStyle}
+                alt={image.context ? image.context.custom.alt : "no alt text"}
+              />
+            )
           })}
         </ul>
       )}

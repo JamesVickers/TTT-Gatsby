@@ -37,10 +37,19 @@ const HexButtonDiv = styled.div`
 `
 
 const examplesArray = [
-  <WorkExampleBrewces />,
-  <WorkExampleBochiBochi />,
-  <WorkExampleApp />,
-  <WorkExampleFreelance />,
+  { title: "Business sites", component: <WorkExampleBrewces /> },
+  {
+    title: "Blog Sites",
+    component: <WorkExampleBochiBochi />,
+  },
+  {
+    title: "Web Apps",
+    component: <WorkExampleApp />,
+  },
+  {
+    title: "Freelance Development",
+    component: <WorkExampleFreelance />,
+  },
 ]
 
 function Work(props) {
@@ -72,7 +81,7 @@ function Work(props) {
             alt="hexagonal button linking to the previous work example page"
           />
         </button>
-        <h2>Business websites</h2>
+        <h2>{examplesArray[workImgNumber].title}</h2>
         <button onClick={() => incrementIndex()}>
           <img
             src={HexButtonRight}
@@ -80,7 +89,7 @@ function Work(props) {
           />
         </button>
       </HexButtonDiv>
-      {examplesArray[workImgNumber]}
+      {examplesArray[workImgNumber].component}
 
       <Footer path={props.location.pathname} />
     </Layout>

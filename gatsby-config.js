@@ -46,6 +46,7 @@ module.exports = {
         apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
         apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
         resourceType: `image`,
+        context: true,
       },
     },
     {

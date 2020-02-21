@@ -70,10 +70,10 @@ const HeaderLogo = styled.img`
 
 const Header = () => (
   <StyledHeader id="header">
-    <ScreenReaderDiv href="#main-content" tabindex="0">
+    <ScreenReaderDiv href="#main-content" tabIndex="0">
       Skip to Main Content
     </ScreenReaderDiv>
-    <ScreenReaderDiv href="#footer" tabindex="0">
+    <ScreenReaderDiv href="#footer" tabIndex="0">
       Skip to Footer
     </ScreenReaderDiv>
     <DesktopNav>
