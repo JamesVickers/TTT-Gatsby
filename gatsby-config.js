@@ -48,6 +48,17 @@ module.exports = {
         resourceType: `image`,
       },
     },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: [
+          "GATSBY_CCC_TEST_API_KEY",
+          "GATSBY_CCC_TEST_PRODUCT",
+          "GATSBY_CCC_PROD_API_KEY",
+          "GATSBY_CCC_PROD_PRODUCT",
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
