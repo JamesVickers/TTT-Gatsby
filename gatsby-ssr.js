@@ -13,6 +13,7 @@ import React from "react"
 
 //export must be ES6 not CommonJS to work
 export const onRenderBody = ({ setHeadComponents }) => {
+  //const apiKeyOutside = process.env.GATSBY_CCC_TEST_API_KEY
   setHeadComponents([
     <script
       key="cookies"
@@ -21,9 +22,10 @@ export const onRenderBody = ({ setHeadComponents }) => {
     <script
       dangerouslySetInnerHTML={{
         __html: `
+      var apiKey = "592b99ebdf88c091dad9b556b6d8de236ac97687"
       var config = {
         //test key and product type - change before going live
-        apiKey: "592b99ebdf88c091dad9b556b6d8de236ac97687",
+        apiKey: apiKey,
         product: "PRO_MULTISITE",
     
         //production key linked to treetops.tech

@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-env-variables": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.30",
     "gatsby-plugin-nprogress": "^2.1.17",
     "gatsby-plugin-offline": "^3.0.24",
