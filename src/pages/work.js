@@ -12,7 +12,7 @@ import HexButtonRight from "../images/hex-button-right.png"
 
 const HexButtonDiv = styled.div`
   max-width: 740px;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,6 +74,7 @@ function Work(props) {
   return (
     <Layout location={props.location}>
       <SEO title="work" />
+      <h2>Work</h2>
       <HexButtonDiv>
         <button onClick={() => decrementIndex()}>
           <img
@@ -81,7 +82,7 @@ function Work(props) {
             alt="hexagonal button linking to the previous work example page"
           />
         </button>
-        <h2>{examplesArray[workImgNumber].title}</h2>
+        <h3>{examplesArray[workImgNumber].title}</h3>
         <button onClick={() => incrementIndex()}>
           <img
             src={HexButtonRight}

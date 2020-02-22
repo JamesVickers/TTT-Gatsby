@@ -26,13 +26,13 @@ export const onRenderBody = ({ setHeadComponents }) => {
       var apiKey = "592b99ebdf88c091dad9b556b6d8de236ac97687"
       var config = {
         //test key and product type - change before going live
-        apiKey: apiKey,
-        product: "PRO_MULTISITE",
+        //apiKey: apiKey,
+        //product: "PRO_MULTISITE",
     
         //production key linked to treetops.tech
-        //apiKey: "4153d1360fba91f35447d9683780224125883891",
+        apiKey: "4153d1360fba91f35447d9683780224125883891",
         //production product type
-        //product: "COMMUNITY",
+        product: "COMMUNITY",
     
         text: {
           title: "This site uses cookies",

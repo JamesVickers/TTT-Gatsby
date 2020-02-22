@@ -44,7 +44,8 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
   h2 {
-    margin: 20px 0;
+    margin-top: 40px
+    margin-bottom: 0;
     font-family: title-font;
   }
   p {
