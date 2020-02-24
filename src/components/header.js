@@ -1,12 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import NProgress from "nprogress"
 import logo from "../images/TTT_header_logo.svg"
-
-NProgress.configure({ minimum: 0.1 })
-NProgress.start()
-NProgress.done()
 
 const ScreenReaderDiv = styled.a`
   position: absolute;

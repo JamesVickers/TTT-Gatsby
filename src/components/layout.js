@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import vatticanFont from "../fonts/Vattican.ttf"
 import Header from "./header"
+import NProgress from "nprogress"
 
 const theme = {
   colorPrimary: "#ffe000",
@@ -74,6 +75,11 @@ const Page = styled.div`
 
 class Layout extends Component {
   state = {}
+  componentDidMount() {
+    NProgress.configure({ minimum: 0.1 })
+    NProgress.start()
+    NProgress.done()
+  }
   render() {
     const page = this.props.location.pathname
     return (
