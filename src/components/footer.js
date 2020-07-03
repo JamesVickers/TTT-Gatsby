@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 import BackToTopButton from "../components/backToTopButton"
-//
-//
+
 const FooterDiv = styled.div`
   flex-shrink: 0;
   margin-top: 40px;
