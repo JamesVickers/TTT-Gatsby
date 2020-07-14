@@ -40,31 +40,31 @@ export const onRenderBody = ({ setHeadComponents }) => {
             "Some of these cookies are essential, while others help us to improve your experience.",
         },
     
-        optionalCookies: [
-          {
-            name: "analytics",
-            label: "Analytics",
-            description:
-              "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
-            cookies: ["_ga", "_gid", "_gat"],
-            logConsent: false,
-            recommendedState: true,
-            onAccept: function() {
-              window.dataLayer = window.dataLayer || []
-              function gtag() {
-                dataLayer.push(arguments)
-              }
-              gtag("js", new Date())
+        // optionalCookies: [
+        //   {
+        //     name: "analytics",
+        //     label: "Analytics",
+        //     description:
+        //       "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
+        //     cookies: ["_ga", "_gid", "_gat"],
+        //     logConsent: false,
+        //     recommendedState: true,
+        //     onAccept: function() {
+        //       window.dataLayer = window.dataLayer || []
+        //       function gtag() {
+        //         dataLayer.push(arguments)
+        //       }
+        //       gtag("js", new Date())
     
-              gtag("config", "UA-142712964-1")
-              // End Google Analytics
-            },
-            onRevoke: function() {
-              // Disable Google Analytics
-              window["ga-disable-UA-142712964-1"] = true
-              // End Google Analytics
-            },
-          },
+        //       gtag("config", "UA-142712964-1")
+        //       // End Google Analytics
+        //     },
+        //     onRevoke: function() {
+        //       // Disable Google Analytics
+        //       window["ga-disable-UA-142712964-1"] = true
+        //       // End Google Analytics
+        //     },
+        //   },
     
           /*,{
             name: "marketing",

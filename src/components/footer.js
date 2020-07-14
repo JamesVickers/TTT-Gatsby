@@ -38,7 +38,8 @@ const Footer = props => (
           Contact us
         </Link>
       </li>
-      <li>support@treetops.tech</li>
+      <li>hvickersdesign@gmail.com</li>
+      <li>jvickersdesign@gmail.com</li>
       <li>01538 266395</li>
       <li>
         <a
@@ -61,7 +62,7 @@ const Footer = props => (
           Privacy Policy
         </Link>
       </li>
-      <li>Treetops Tech Ltd. 2019</li>
+      <li>Treetops Tech Ltd</li>
       <li>All rights reserved</li>
     </ul>
   </FooterDiv>
